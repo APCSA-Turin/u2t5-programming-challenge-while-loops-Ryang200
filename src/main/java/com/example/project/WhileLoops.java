@@ -87,16 +87,16 @@ public class WhileLoops {
     */
    public static int countDownBy(int start, int step) {
        // YOUR CODE HERE
-       if (step>start){
-        return start;
-       }
-       if (step<=0){
-        return start;
-       }
-       while (start>0-step) {
+    if (step <= 0 || start <= 0) {
+        return start >= 0 ? start : 0;
+    }
+
+ 
+    while (start >= step) {
         start -= step;
-       }
-       return start;
+    }
+    
+    return start;
    }
 
 
